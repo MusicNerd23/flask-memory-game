@@ -42,3 +42,14 @@ h1 {
     transform: scale(1.1);
     background-color: #2a2a2a;
 }
+
+.card {
+    background-color: #1e1e1e;
+    color: transparent; /* Hide text initially */
+    transition: transform 0.3s, background-color 0.3s, color 0.3s;
+}
+
+.card.flipped {
+    background-color: #ffffff; /* Light color when flipped */
+    color: #000000; /* Reveal text */
+}
