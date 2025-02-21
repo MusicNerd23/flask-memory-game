@@ -5,9 +5,9 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    card_values = ["🔥", "🔥", "💎", "💎", "🌟", "🌟", "🎩", "🎩"]
+    card_values = ["🍎", "🍎", "🍌", "🍌", "🍇", "🍇", "🍒", "🍒"]
     random.shuffle(card_values)
     return render_template("index.html", card_values=card_values)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=9000, debug=True)

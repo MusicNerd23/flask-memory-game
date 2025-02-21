@@ -35,7 +35,8 @@ h1 {
     font-size: 1.5rem;
     cursor: pointer;
     margin: 10px;
-    transition: transform 0.3s, background-color 0.3s;
+    transition: transform 0.3s, background-color 0.3s, color 0.3s;
+    color: rgba(255, 255, 255, 0); /* Hide text */
 }
 
 .card:hover {
@@ -43,44 +44,40 @@ h1 {
     background-color: #2a2a2a;
 }
 
-.card {
-    background-color: #1e1e1e;
-    color: transparent; /* Hide text initially */
-    transition: transform 0.3s, background-color 0.3s, color 0.3s;
-}
-
 .card.flipped {
     background-color: #ffffff; /* Light color when flipped */
-    color: #000000; /* Reveal text */
+    color: black; /* Reveal text */
+}
 
-    
-    .card.matched {
-        background-color: #00ff00; /* Green for matched cards */
-        color: black;
-        pointer-events: none; /* Disable clicking */
-    }
+/* ✅ Moved this outside of .card.flipped */
+.card.matched {
+    background-color: #00ff00; /* Green for matched cards */
+    color: black;
+    pointer-events: none; /* Disable clicking */
+}
 
-    .win-screen {
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background: rgba(0, 0, 0, 0.8);
-        color: white;
-        padding: 20px;
-        border-radius: 10px;
-        text-align: center;
-        font-size: 2rem;
-        box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
-    }
-    
-    .win-screen button {
-        background: #ffffff;
-        color: #000;
-        border: none;
-        padding: 10px 20px;
-        font-size: 1rem;
-        margin-top: 10px;
-        cursor: pointer;
-        border-radius: 5px;
-    }
+/* ✅ Moved this outside of .card.flipped */
+.win-screen {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 2rem;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.win-screen button {
+    background: #ffffff;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
