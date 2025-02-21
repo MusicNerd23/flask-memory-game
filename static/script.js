@@ -37,7 +37,17 @@ document.addEventListener("DOMContentLoaded", () => {
         flippedCards = [];
 
         if (matchedPairs === cards.length / 2) {
-            setTimeout(() => alert("You Win!"), 300);
+            setTimeout(() => {
+                document.body.innerHTML += `
+                    <div class="win-screen">
+                        <h2>🎉 You Win! 🎉</h2>
+                        <button id="play-again">Play Again</button>
+                    </div>
+                `;
+                document.getElementById("play-again").addEventListener("click", () => {
+                    window.location.reload();
+                });
+            }, 300);
         }
     }
 

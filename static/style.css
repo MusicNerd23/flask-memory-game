@@ -60,4 +60,27 @@ h1 {
         pointer-events: none; /* Disable clicking */
     }
 
+    .win-screen {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: rgba(0, 0, 0, 0.8);
+        color: white;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+        font-size: 2rem;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    }
     
+    .win-screen button {
+        background: #ffffff;
+        color: #000;
+        border: none;
+        padding: 10px 20px;
+        font-size: 1rem;
+        margin-top: 10px;
+        cursor: pointer;
+        border-radius: 5px;
+    }
