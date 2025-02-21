@@ -52,4 +52,12 @@ h1 {
 .card.flipped {
     background-color: #ffffff; /* Light color when flipped */
     color: #000000; /* Reveal text */
-}
+
+    
+    .card.matched {
+        background-color: #00ff00; /* Green for matched cards */
+        color: black;
+        pointer-events: none; /* Disable clicking */
+    }
+
+    
