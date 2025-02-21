@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    card_values = ["A", "A", "B", "B", "C", "C", "D", "D"]
+    card_values = ["🔥", "🔥", "💎", "💎", "🌟", "🌟", "🎩", "🎩"]
     random.shuffle(card_values)
     return render_template("index.html", card_values=card_values)
 
