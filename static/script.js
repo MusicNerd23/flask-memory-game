@@ -7,6 +7,8 @@ document.addEventListener("DOMContentLoaded", () => {
         card.addEventListener("click", () => {
             if (flippedCards.length < 2 && !card.classList.contains("matched")) {
                 card.classList.add("flipped");
+                card.textContent = card.dataset.value; // Reveal value
+                
                 flippedCards.push(card);
 
                 if (flippedCards.length === 2) {
@@ -24,13 +26,14 @@ document.addEventListener("DOMContentLoaded", () => {
             card2.classList.add("matched");
             matchedPairs++;
         } else {
+            card1.textContent = "?";
+            card2.textContent = "?";
             card1.classList.remove("flipped");
             card2.classList.remove("flipped");
         }
 
         flippedCards = [];
 
-        // Check if all pairs are matched
         if (matchedPairs === cards.length / 2) {
             setTimeout(() => alert("You Win!"), 300);
         }

@@ -9,6 +9,7 @@
 <body>
         <h1>Memory Game</h1>
         <div class="game-container">
+            {% for value in card_values %}
             <div class="card" data-value="A">?</div>
             <div class="card" data-value="A">?</div>
             <div class="card" data-value="B">?</div>
@@ -17,6 +18,7 @@
             <div class="card" data-value="C">?</div>
             <div class="card" data-value="D">?</div>
             <div class="card" data-value="D">?</div>
+            {% endfor %}
         </div>
         <script src="{{ url_for('static', filename='script.js') }}" defer></script>
 </body>
